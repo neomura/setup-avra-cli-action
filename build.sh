@@ -15,4 +15,9 @@ git submodule update --init --recursive submodules/Ro5bert/avra
 cd submodules
 cd Ro5bert
 cd avra
-sudo make install
+
+if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+  make install
+else
+  sudo make install
+fi
