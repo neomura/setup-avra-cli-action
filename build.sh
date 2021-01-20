@@ -32,6 +32,5 @@ else
   cp ./src/avra.exe c:/neomura-setup-avra-cli-action/avra.exe
   echo "c:/neomura-setup-avra-cli-action" >> $GITHUB_PATH
 
-  sed -i 's#AVRA="../../src/avra"#AVRA="avra"#' ./tests/regression/runtests.sh
   make check OS=mingw32
 fi
