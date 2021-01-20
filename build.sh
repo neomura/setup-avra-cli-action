@@ -24,10 +24,10 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   make check
 else
   make OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe
-  #rm -rf ./bin
-  #mkdir -p ./bin
-  #cp ./src/avra.exe ./bin/avra.exe
-  #echo "$PWD/bin" >> $GITHUB_PATH
+  rm -rf ./bin
+  mkdir -p ./bin
+  cp ./src/avra.exe ./bin/avra.exe
+  echo "$PWD/bin" >> $GITHUB_PATH
 
   #make check OS=mingw32
 fi
