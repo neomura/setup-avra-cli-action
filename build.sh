@@ -23,7 +23,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sudo make install
   make check
 else
-  make OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe TARGET_INCLUDE_PATH=$PWD
+  make OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe TARGET_INCLUDE_PATH="$PWD/includes"
   rm -rf ./bin
   mkdir -p ./bin
   cp ./src/avra.exe ./bin/avra.exe
