@@ -15,4 +15,4 @@ git submodule update --init --recursive submodules/Ro5bert/avra
 cd submodules
 cd Ro5bert
 cd avra
-make install
+sudo make install
