@@ -1,0 +1,3 @@
+[submodule "submodules/Ro5bert/avra"]
+	path = submodules/Ro5bert/avra
+	url = https://github.com/Ro5bert/avra

@@ -1,0 +1,6 @@
+build
+clone
+node_modules
+test/example.eep.hex
+test/example.hex
+test/example.obj
