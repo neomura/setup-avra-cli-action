@@ -21,6 +21,9 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sudo make install
 else
-  make install OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe
-  dir
+  make OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe
+  rm -rf ./bin
+  mkdir -p ./bin
+  cp ./src/avra.exe ./bin/avra.exe
+  echo "$PWD/bin" >> $GITHUB_PATH
 fi
