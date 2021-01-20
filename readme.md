@@ -29,9 +29,6 @@ jobs:
     # load your repository.
     - uses: actions/checkout@v2
 
-    # install MSVC - only needed on Windows.
-    - uses: ilammy/msvc-dev-cmd@v1
-
     # install this github action.
     - uses: neomura/setup-avra-cli-action@v1.0.0
 
