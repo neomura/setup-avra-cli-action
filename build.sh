@@ -17,9 +17,16 @@ cd Ro5bert
 cd avra
 
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-  choco install msys2
   make
   echo "$PWD/avra.exe" >> $GITHUB_PATH
 else
   sudo make install
+fi
+
+if [ "$(uname)" == "Darwin" ]; then
+  make install OS=osx
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  sudo make install
+else
+  make install OS=mingw32
 fi
