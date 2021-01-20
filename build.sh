@@ -29,5 +29,7 @@ else
   cp ./src/avra.exe ./bin/avra.exe
   echo "$PWD/bin" >> $GITHUB_PATH
 
+  dir "$PWD/bin"
+
   #make check OS=mingw32
 fi
