@@ -23,11 +23,14 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sudo make install
   make check
 else
-  make OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe TARGET_INCLUDE_PATH="$PWD/includes"
-  rm -rf ./bin
-  mkdir -p ./bin
-  cp ./src/avra.exe ./bin/avra.exe
-  echo "$PWD/bin" >> $GITHUB_PATH
+  rm -rf c:/neomura-setup-avra-cli-action
+  mkdir -p c:/neomura-setup-avra-cli-action
+
+  cp -r ./includes c:/neomura-setup-avra-cli-action
+
+  make OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe TARGET_INCLUDE_PATH=c:/neomura-setup-avra-cli-action/includes
+  cp ./src/avra.exe c:/neomura-setup-avra-cli-action/avra.exe
+  echo "c:/neomura-setup-avra-cli-action" >> $GITHUB_PATH
 
   #make check OS=mingw32
 fi

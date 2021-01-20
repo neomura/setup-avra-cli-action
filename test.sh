@@ -7,5 +7,8 @@ avra ./test/example.asm
 cmp ./test/expected.eep.hex ./test/example.eep.hex
 cmp ./test/expected.hex ./test/example.hex
 
-uname
-cmp ./test/expected.obj ./test/example.obj
+if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+  cmp ./test/expected-mingw32.obj ./test/example.obj
+else
+  cmp ./test/expected.obj ./test/example.obj
+fi
