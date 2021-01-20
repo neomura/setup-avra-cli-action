@@ -28,5 +28,6 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sudo make install
 else
-  make install OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe
+  sed -i 's/^OS = linux$/OS = mingw32/' ./Makefile
+  make install
 fi
