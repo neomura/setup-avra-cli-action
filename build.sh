@@ -27,3 +27,5 @@ else
   cp ./src/avra.exe ./bin/avra.exe
   echo "$PWD/bin" >> $GITHUB_PATH
 fi
+
+make check
