@@ -6,4 +6,6 @@ avra ./test/example.asm
 
 cmp ./test/expected.eep.hex ./test/example.eep.hex
 cmp ./test/expected.hex ./test/example.hex
+
+uname
 cmp ./test/expected.obj ./test/example.obj
