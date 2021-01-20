@@ -32,5 +32,5 @@ else
   cp ./src/avra.exe c:/neomura-setup-avra-cli-action/avra.exe
   echo "c:/neomura-setup-avra-cli-action" >> $GITHUB_PATH
 
-  make check OS=mingw32
+  make check OS=mingw32 CC=x86_64-w64-mingw32-gcc.exe TARGET_INCLUDE_PATH=c:/neomura-setup-avra-cli-action/includes
 fi
