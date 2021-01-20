@@ -17,7 +17,8 @@ cd Ro5bert
 cd avra
 
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-  make install
+  make
+  echo "$PWD/avra.exe" >> $GITHUB_PATH
 else
   sudo make install
 fi
