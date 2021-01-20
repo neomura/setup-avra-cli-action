@@ -16,18 +16,10 @@ cd submodules
 cd Ro5bert
 cd avra
 
-if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-  make
-  echo "$PWD/avra.exe" >> $GITHUB_PATH
-else
-  sudo make install
-fi
-
 if [ "$(uname)" == "Darwin" ]; then
   make install OS=osx
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sudo make install
 else
-  sed -i 's/^OS = linux$/OS = mingw32/' ./Makefile
-  make install
+  make install OS=mingw32
 fi
