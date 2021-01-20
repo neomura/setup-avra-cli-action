@@ -17,7 +17,7 @@ cd Ro5bert
 cd avra
 
 if [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-  i686-pc-mingw32-gcc --help
+  choco install msys2
   make
   echo "$PWD/avra.exe" >> $GITHUB_PATH
 else
