@@ -1,22 +1,18 @@
-# neomura > setup avra cli action
+# neomura/setup-avra-cli-action
 
-github action to build and install avra cli
+GitHub Action to build and install the AVRA CLI.
 
-## license
+## License
 
-while this repository is [mit licensed](./license.md), it includes a git
-submodule of the [avra repository](https://github.com/Ro5bert/avra), which uses
-the gpl-2.0 license.
+While this repository is [MIT licensed](./license.md), it includes a Git submodule of the [AVRA repository](https://github.com/Ro5bert/avra), which uses the GPL-2.0 license.
 
-you should make your own checks to ensure that your usage of this github action
-is valid within its license agreement.
+You should make your own checks to ensure that your usage of this GitHub action is valid within its license agreement.
 
-## supported virtual environments
+## Supported virtual environments
 
-supported virtual environments are listed in the
-[test workflow](./.github/workflows/test.yaml).
+Supported virtual environments are listed in the [test workflow](./.github/workflows/test.yaml).
 
-## usage
+## Usage
 
 ```yaml
 on: [push]
