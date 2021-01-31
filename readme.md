@@ -22,12 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    # load your repository.
+    # Load your repository.
     - uses: actions/checkout@v2
 
-    # install this github action.
+    # Install this github action.
     - uses: neomura/setup-avra-cli-action@v1.0.1
 
-    # avra is now available on the path.
+    # Avra is now available on the path.
     - run: avra --help
 ```
