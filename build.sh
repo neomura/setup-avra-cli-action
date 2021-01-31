@@ -12,7 +12,7 @@ git remote add origin https://github.com/$NEOMURA_SETUP_AVRA_CLI_ACTION_REPOSITO
 git fetch origin $NEOMURA_SETUP_AVRA_CLI_ACTION_REF:temp
 git checkout temp
 
-git submodule update --init --recursive submodules/Ro5bert/avra
+git submodule update --init --recursive --depth 1 submodules/Ro5bert/avra
 
 cd submodules
 cd Ro5bert
