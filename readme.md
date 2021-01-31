@@ -26,7 +26,7 @@ jobs:
     - uses: actions/checkout@v2
 
     # install this github action.
-    - uses: neomura/setup-avra-cli-action@v1.0.0
+    - uses: neomura/setup-avra-cli-action@v1.0.1
 
     # avra is now available on the path.
     - run: avra --help
