@@ -1,5 +1,5 @@
 name: setup-avra-cli-action
-description: github action to build and install avra cli
+description: GitHub Action to build and install the AVRA CLI.
 branding:
   icon: terminal
   color: white
