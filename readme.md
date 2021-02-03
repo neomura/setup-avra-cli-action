@@ -30,4 +30,5 @@ jobs:
 
     # Avra is now available on the path.
     - run: avra --help
+      shell: bash
 ```
