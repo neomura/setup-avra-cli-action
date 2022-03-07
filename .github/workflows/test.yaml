@@ -13,7 +13,7 @@ jobs:
         - macos-11.0
         - macos-10.15
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - run: bash ./build.sh
       env:
         NEOMURA_SETUP_AVRA_CLI_ACTION_REPOSITORY: ${{ GITHUB.REPOSITORY }}
